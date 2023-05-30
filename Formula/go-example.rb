@@ -5,20 +5,20 @@
 class GoExample < Formula
   desc "Example"
   homepage "https://github.com/profiprog/go-example"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/profiprog/go-example/releases/download/v0.1.1/go-example_v0.1.1_darwin_arm64.tar.gz"
-      sha256 "04d2a43943090d349c6bf21acb7a64376ac112198c23d2740f94a05a47dcc653"
+      url "https://github.com/profiprog/go-example/releases/download/v0.1.2/go-example_v0.1.2_darwin_arm64.tar.gz"
+      sha256 "7f143d1fc314874f8e252d6abcedc925f39d90b5a830f8e8ca21d6958cb89562"
 
       def install
         bin.install "go-example"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/profiprog/go-example/releases/download/v0.1.1/go-example_v0.1.1_darwin_amd64.tar.gz"
-      sha256 "dbc32c013533a85cf042b708ddbd79de3f19cc58945c085f63f60fe5bb592cfd"
+      url "https://github.com/profiprog/go-example/releases/download/v0.1.2/go-example_v0.1.2_darwin_amd64.tar.gz"
+      sha256 "fc614362f2881391384a6438bea7a57dc4bc41ce35477c172612ed317f55637c"
 
       def install
         bin.install "go-example"
@@ -28,16 +28,16 @@ class GoExample < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/profiprog/go-example/releases/download/v0.1.1/go-example_v0.1.1_linux_arm64.tar.gz"
-      sha256 "6d8e56d4d8524408c815e43b0b338eb59586aa2124267d3700417e9972a16559"
+      url "https://github.com/profiprog/go-example/releases/download/v0.1.2/go-example_v0.1.2_linux_arm64.tar.gz"
+      sha256 "c877fd893170ffa1789cdca5134e05991702a201266fbb36131ba644399ecf3f"
 
       def install
         bin.install "go-example"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/profiprog/go-example/releases/download/v0.1.1/go-example_v0.1.1_linux_amd64.tar.gz"
-      sha256 "337486a51be608ca4768d48a7f8553d930ca4ea70a80174121cb447fd7eb55cf"
+      url "https://github.com/profiprog/go-example/releases/download/v0.1.2/go-example_v0.1.2_linux_amd64.tar.gz"
+      sha256 "9f98aa6effe519b2ee6117d94801990ef132b9839d719f1429d4b6ce82da2aa1"
 
       def install
         bin.install "go-example"
