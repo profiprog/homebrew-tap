@@ -8,17 +8,17 @@ class Res < Formula
   version "0.1.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/profiprog/res/releases/download/v0.1.0/res_v0.1.0_darwin_arm64.tar.gz"
-      sha256 "1162b6dfb934bebaa639845b12eb831df6b083a1d358028368d63a7ea62ad0dd"
+    if Hardware::CPU.intel?
+      url "https://github.com/profiprog/res/releases/download/v0.1.0/res_v0.1.0_darwin_amd64.tar.gz"
+      sha256 "44b28c0ebe28b4578094cf0bbfbe18d8228668c10ca8de9d6342fb0f4e05a9b4"
 
       def install
         bin.install "res"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/profiprog/res/releases/download/v0.1.0/res_v0.1.0_darwin_amd64.tar.gz"
-      sha256 "a39b252629c759a12897a018ab0851e174c3312dfea69e73662b3a2d47acf008"
+    if Hardware::CPU.arm?
+      url "https://github.com/profiprog/res/releases/download/v0.1.0/res_v0.1.0_darwin_arm64.tar.gz"
+      sha256 "ba41ce2727c939e116c2eb8a5df87a72980748fa8c41d90da3e0df20e4ed815e"
 
       def install
         bin.install "res"
@@ -29,7 +29,7 @@ class Res < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/profiprog/res/releases/download/v0.1.0/res_v0.1.0_linux_arm64.tar.gz"
-      sha256 "175540424e80f96e8a1df8a436f48057da8b52a88bcfb08c624a5eb9532e6a03"
+      sha256 "08855b516f1ee4c3181db05bcfc4096252fa6ec7b7d0e883aa98d46c9c27dc99"
 
       def install
         bin.install "res"
@@ -37,7 +37,7 @@ class Res < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/profiprog/res/releases/download/v0.1.0/res_v0.1.0_linux_amd64.tar.gz"
-      sha256 "8e8cc9e36a31c2d85b57e863e265b7e3e21d89fcb1fdb020d48bc7b8de597808"
+      sha256 "def12e6ef77e45226f535d02c9c12718c0ea3f8c3830020f9a625ef70261dbcd"
 
       def install
         bin.install "res"
