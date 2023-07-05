@@ -8,17 +8,17 @@ class Res < Formula
   version "0.1.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/profiprog/res/releases/download/v0.1.0/res_v0.1.0_darwin_amd64.tar.gz"
-      sha256 "44b28c0ebe28b4578094cf0bbfbe18d8228668c10ca8de9d6342fb0f4e05a9b4"
+    if Hardware::CPU.arm?
+      url "https://github.com/profiprog/res/releases/download/v0.1.0/res_v0.1.0_darwin_arm64.tar.gz"
+      sha256 "7b69f9f6f199c8781dd757650be50ee8d67d1843a2592243f877ca00386ecbf9"
 
       def install
         bin.install "res"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/profiprog/res/releases/download/v0.1.0/res_v0.1.0_darwin_arm64.tar.gz"
-      sha256 "ba41ce2727c939e116c2eb8a5df87a72980748fa8c41d90da3e0df20e4ed815e"
+    if Hardware::CPU.intel?
+      url "https://github.com/profiprog/res/releases/download/v0.1.0/res_v0.1.0_darwin_amd64.tar.gz"
+      sha256 "95e56d3d3eddc90bd90913ebf33810f57f8f4e9c372e80ebc60a87b5b52d2af5"
 
       def install
         bin.install "res"
@@ -27,17 +27,17 @@ class Res < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/profiprog/res/releases/download/v0.1.0/res_v0.1.0_linux_arm64.tar.gz"
-      sha256 "08855b516f1ee4c3181db05bcfc4096252fa6ec7b7d0e883aa98d46c9c27dc99"
+    if Hardware::CPU.intel?
+      url "https://github.com/profiprog/res/releases/download/v0.1.0/res_v0.1.0_linux_amd64.tar.gz"
+      sha256 "c22eda6699d03f6d352cc830d58f2aed6da948915858565a1d62c5c4f13bd6c0"
 
       def install
         bin.install "res"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/profiprog/res/releases/download/v0.1.0/res_v0.1.0_linux_amd64.tar.gz"
-      sha256 "def12e6ef77e45226f535d02c9c12718c0ea3f8c3830020f9a625ef70261dbcd"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/profiprog/res/releases/download/v0.1.0/res_v0.1.0_linux_arm64.tar.gz"
+      sha256 "45b14ed935bf0ba07d1d22310f382df5a3a5b06e2b4436fa137ed3ce17be5503"
 
       def install
         bin.install "res"
