@@ -5,20 +5,20 @@
 class Res < Formula
   desc "Example"
   homepage "https://github.com/profiprog/res"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/profiprog/res/releases/download/v0.1.0/res_v0.1.0_darwin_arm64.tar.gz"
-      sha256 "7b69f9f6f199c8781dd757650be50ee8d67d1843a2592243f877ca00386ecbf9"
+      url "https://github.com/profiprog/res/releases/download/v0.1.1/res_v0.1.1_darwin_arm64.tar.gz"
+      sha256 "b249b5c455e63e8b2cf63442e791c974fd7dfdfc1412217805d040eadf46540d"
 
       def install
         bin.install "res"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/profiprog/res/releases/download/v0.1.0/res_v0.1.0_darwin_amd64.tar.gz"
-      sha256 "95e56d3d3eddc90bd90913ebf33810f57f8f4e9c372e80ebc60a87b5b52d2af5"
+      url "https://github.com/profiprog/res/releases/download/v0.1.1/res_v0.1.1_darwin_amd64.tar.gz"
+      sha256 "c0469e42d228bb7e130a0789ba510cd401786bd7c945dc6a4e44994f5b0a5580"
 
       def install
         bin.install "res"
@@ -27,17 +27,17 @@ class Res < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/profiprog/res/releases/download/v0.1.0/res_v0.1.0_linux_amd64.tar.gz"
-      sha256 "c22eda6699d03f6d352cc830d58f2aed6da948915858565a1d62c5c4f13bd6c0"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/profiprog/res/releases/download/v0.1.1/res_v0.1.1_linux_arm64.tar.gz"
+      sha256 "4ef65ef2cccc872ce31e362fe96e6d2c3a5fe7c6744165c4159d8b23be184c84"
 
       def install
         bin.install "res"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/profiprog/res/releases/download/v0.1.0/res_v0.1.0_linux_arm64.tar.gz"
-      sha256 "45b14ed935bf0ba07d1d22310f382df5a3a5b06e2b4436fa137ed3ce17be5503"
+    if Hardware::CPU.intel?
+      url "https://github.com/profiprog/res/releases/download/v0.1.1/res_v0.1.1_linux_amd64.tar.gz"
+      sha256 "a681966a8e97be57941036345eb671dc907ec0218cf9b37d473c6614c0427530"
 
       def install
         bin.install "res"
