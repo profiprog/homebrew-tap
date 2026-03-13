@@ -5,41 +5,39 @@
 class Res < Formula
   desc "Example"
   homepage "https://github.com/profiprog/res"
-  version "0.1.1"
+  version "0.2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/profiprog/res/releases/download/v0.1.1/res_v0.1.1_darwin_arm64.tar.gz"
-      sha256 "b249b5c455e63e8b2cf63442e791c974fd7dfdfc1412217805d040eadf46540d"
+    if Hardware::CPU.intel?
+      url "https://github.com/profiprog/res/releases/download/v0.2.0/res_v0.2.0_darwin_amd64.tar.gz"
+      sha256 "34148d9d615a2fca87b7a05a868285fd7bf7c73fe4f091f6c9c777ce7f539422"
 
-      def install
+      define_method(:install) do
         bin.install "res"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/profiprog/res/releases/download/v0.1.1/res_v0.1.1_darwin_amd64.tar.gz"
-      sha256 "c0469e42d228bb7e130a0789ba510cd401786bd7c945dc6a4e44994f5b0a5580"
+    if Hardware::CPU.arm?
+      url "https://github.com/profiprog/res/releases/download/v0.2.0/res_v0.2.0_darwin_arm64.tar.gz"
+      sha256 "3246931f64446877aa0319f66a32e6559bcc1d5e842c7c7dd1a471005feeae8d"
 
-      def install
+      define_method(:install) do
         bin.install "res"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/profiprog/res/releases/download/v0.1.1/res_v0.1.1_linux_arm64.tar.gz"
-      sha256 "4ef65ef2cccc872ce31e362fe96e6d2c3a5fe7c6744165c4159d8b23be184c84"
-
-      def install
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/profiprog/res/releases/download/v0.2.0/res_v0.2.0_linux_amd64.tar.gz"
+      sha256 "fb05b27675e05a00913142ac356c5ef084c2a3dccb9b2cec8a22f1e376c1c775"
+      define_method(:install) do
         bin.install "res"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/profiprog/res/releases/download/v0.1.1/res_v0.1.1_linux_amd64.tar.gz"
-      sha256 "a681966a8e97be57941036345eb671dc907ec0218cf9b37d473c6614c0427530"
-
-      def install
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/profiprog/res/releases/download/v0.2.0/res_v0.2.0_linux_arm64.tar.gz"
+      sha256 "d80628331ca44717d899a28fe04571bfc4cf1b5acb67fc53e337504421c6c49f"
+      define_method(:install) do
         bin.install "res"
       end
     end
