@@ -5,20 +5,20 @@
 class Res < Formula
   desc "Tool for filtering kubernetes resources defined in yaml"
   homepage "https://github.com/profiprog/res"
-  version "0.3.1"
+  version "0.3.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/profiprog/res/releases/download/v0.3.1/res_v0.3.1_darwin_amd64.tar.gz"
-      sha256 "012de371c0ea6c053497d86cccfb3eccad3ee20e824c263e18418952f44d3d2f"
+      url "https://github.com/profiprog/res/releases/download/v0.3.2/res_v0.3.2_darwin_amd64.tar.gz"
+      sha256 "012271d83824196c2747123f6f87d853ccd3c5ea8021d32ceabc578f5d1d50ee"
 
       define_method(:install) do
         bin.install "res"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/profiprog/res/releases/download/v0.3.1/res_v0.3.1_darwin_arm64.tar.gz"
-      sha256 "07e8fd6feb7048e8b7ee7c6d00824747dd6bafabfba22f2260d109bcee5ae90b"
+      url "https://github.com/profiprog/res/releases/download/v0.3.2/res_v0.3.2_darwin_arm64.tar.gz"
+      sha256 "40febdbb69904eaed87136124323a1cb06dbaf2ee09f66dc3ab6e8615baa98ca"
 
       define_method(:install) do
         bin.install "res"
@@ -28,15 +28,15 @@ class Res < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/profiprog/res/releases/download/v0.3.1/res_v0.3.1_linux_amd64.tar.gz"
-      sha256 "1c747ab8af73fb2bd7ec13fb64dfb6a2e5e44f6bf363a75ee4454e5e051c3622"
+      url "https://github.com/profiprog/res/releases/download/v0.3.2/res_v0.3.2_linux_amd64.tar.gz"
+      sha256 "b97359e18c137ccd83ca0fcfbf06fb3689ee1b4afc8c5355edab827f87a7ddb2"
       define_method(:install) do
         bin.install "res"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/profiprog/res/releases/download/v0.3.1/res_v0.3.1_linux_arm64.tar.gz"
-      sha256 "af17cfdbe99a04e41ae5fb4f84c17ec67d33b4157384093d816581376f50f379"
+      url "https://github.com/profiprog/res/releases/download/v0.3.2/res_v0.3.2_linux_arm64.tar.gz"
+      sha256 "3d3b69b8b6a3e6530ec71fed27372484a8b0cb9c6e342ad733678153faeb36b1"
       define_method(:install) do
         bin.install "res"
       end
